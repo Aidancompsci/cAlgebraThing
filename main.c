@@ -1,32 +1,39 @@
+#include <array>
 #include <stdio.h>
+#include <string.h>
 
-int calculate_number(int, int);
+int solve_tokens(char tokens[], int amount_tokens, int x_value) {
+  int index;
+  int sum = 0;
 
-/*
-void print_string(char thing[]){
-    int i;
-
-    for (i = 0; sizeof(thing) / sizeof(char); i++) {
-        printf("%c", thing[i]);
-    }
-
-    printf("\n");
-}
-*/
-void main() {
-
-    char thing[] = "x + 3";
+  for (index = 0; index < amount_tokens; index++) {
     
-    int i;
+  }
 
-    for (i = 0; (sizeof(thing) / sizeof(char) - 1); i++) {
-        printf("%c", thing[i]);
-    }
-
-    printf("\n");
+  return 0;
 }
 
+int main() {
 
-int calculate_number(int a, int b) {
-    return a + b;
+  char *thing = "x + 3";
+
+  int length = strlen(thing);
+
+  char tokens[length];
+
+  int index;
+
+  for (index = 0; index < strlen(thing); index++) {
+    if (thing[index] == ' ') {
+      continue;
+    }
+
+    printf("%c", thing[index]);
+  }
+
+  printf("\n");
+
+  printf("%s \n", thing);
+
+  return 0;
 }
