@@ -6,6 +6,10 @@ int solve_tokens(char tokens[], int amount_tokens, int x_value) {
   int index;
   int sum = 0;
 
+  int a;
+  int operation;
+  int b;
+
   for (index = 0; index < amount_tokens; index++) {
     
   }
@@ -15,11 +19,10 @@ int solve_tokens(char tokens[], int amount_tokens, int x_value) {
 
 int main() {
 
+  int x_value = 3;
+  
   char *thing = "x + 3";
-
-  int length = strlen(thing);
-
-  char tokens[length];
+  char tokens[strlen(thing)];
 
   int index;
 
