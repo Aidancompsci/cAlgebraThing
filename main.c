@@ -1,21 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include <solve.h>
+#include "solve.h"
 
-int solve_tokens(char tokens[], int amount_tokens, int x_value) {
-  int index;
-  int sum = 0;
 
-  int a;
-  int operation;
-  int b;
-
-  for (index = 0; index < amount_tokens; index++) {
-    
-  }
-
-  return 0;
-}
 
 int main() {
   // value to substitute for X  
@@ -24,25 +11,17 @@ int main() {
   char *thing = "x + 3";
   int length = strlen(thing);
   
-  char tokens[length];
-  int token_index = 0;
+  int numbers[2] = {3,3};
+  char operations[1] = {"+"};
 
+
+  // Solve Addition
   int index;
-  for (index = 0; index < strlen(thing); index++) {
-    if (thing[index] == ' ') {
-      continue;
-    }
+  int solved_value;
 
-
+  for (index = 0; index < (sizeof(operations) / sizeof(operations[0])); index++) {
     
-    printf("%c", thing[index]);
-    tokens[token_index] = thing[index];
-    token_index += 1;
   }
-
-  printf("\n");
-
-  printf("%s \n", thing);
 
   return 0;
 }

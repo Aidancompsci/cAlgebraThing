@@ -1,26 +1,15 @@
-#include <string.h>
+int solve_operation(int number_one, int number_two, char operation) {
 
-void create_parenthesis(char main_tokens);
-int solve_parenthesis(char solve_tokens[]);
-
-int solve_addition(char solve_tokens[]);
-
-
-
-int solve_addition(char solve_tokens[]) {
-    int index;
-
-    int sum = 0;
-
-    for (index = 0; index < strlen(solve_tokens); index++) {
-        switch (solve_tokens[index])
-        {
-        case /* constant-expression */:
-            /* code */
-            break;
-        
-        default:
-            break;
-        }
-    }
+  switch (operation) {
+    case '*':
+      return number_one * number_two;
+    case '+':
+      return number_one + number_two;
+    case '/':
+      return  number_one / number_two;
+    case '-':
+      return number_one - number_two;
+  }
+  
+  return 0;
 }
