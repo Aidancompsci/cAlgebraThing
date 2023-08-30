@@ -16,10 +16,10 @@ int main() {
 
   // Solve Multiplicaiton & Division
   int mult_index;
-  int mult_amount = count_multiplications(operations, sizeof(operations) / sizeof(char));
-  printf("%d \n", mult_amount);
-  char new_operations[(sizeof(operations) / sizeof(operations[0])) - mult_amount];
-  int new_numbers[(sizeof(numbers) / sizeof(numbers[0])) - mult_amount];
+  //int mult_amount = count_multiplications(operations, (sizeof(operations) / sizeof(operations[0])));
+  //printf("%d \n", mult_amount);
+  char new_operations[(sizeof(operations) / sizeof(operations[0])) /*- mult_amount*/];
+  int new_numbers[(sizeof(numbers) / sizeof(numbers[0])) /*- mult_amount*/];
 
   int new_index = 0;
 

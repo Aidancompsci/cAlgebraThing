@@ -14,7 +14,7 @@ int solve_operation(int number_one, int number_two, char operation) {
   return 0;
 }
 
-int count_multiplications(char * operations, int elements){
+int count_multiplications(char operations[], int elements){
   int index = 0;
   int count = 0;
 
