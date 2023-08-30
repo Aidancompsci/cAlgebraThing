@@ -10,10 +10,13 @@ int main() {
   int length = strlen(thing);
 
   int numbers[] = {3, 3, 6, 10};
-  char operations[] = {'+', '-', '+'};
+  char operations[] = {'+', '*', '+'};
 
   // Solve Multiplicaiton & Division
   int mult_index;
+  char new_operations[sizeof(operations) / sizeof(operations[0])];
+  char new_numbers[sizeof(numbers) / sizeof(numbers[0])];
+
   
   for (mult_index = 0; mult_index < (sizeof(operations) / sizeof(operations[0])); mult_index++) {
     char current_operation = operations[mult_index];
