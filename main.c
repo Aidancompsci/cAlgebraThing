@@ -4,7 +4,6 @@
 
 
 
-
 int main() {
   // value to substitute for X
   int x_value = 3;
@@ -17,8 +16,10 @@ int main() {
 
   // Solve Multiplicaiton & Division
   int mult_index;
-  char new_operations[sizeof(operations) / sizeof(operations[0])];
-  int new_numbers[sizeof(numbers) / sizeof(numbers[0])];
+  int mult_amount = count_multiplications(operations, sizeof(operations) / sizeof(char));
+  printf("%d \n", mult_amount);
+  char new_operations[(sizeof(operations) / sizeof(operations[0])) - mult_amount];
+  int new_numbers[(sizeof(numbers) / sizeof(numbers[0])) - mult_amount];
 
   int new_index = 0;
 
@@ -44,6 +45,7 @@ int main() {
   // Solve Addition & Subtraction
   int add_index;
   int solved_value = new_numbers[0];
+  printf("%d \n", solved_value);
 
   for (add_index = 0; add_index < (sizeof(new_operations) / sizeof(new_operations[0]));
        add_index++) {
@@ -52,6 +54,6 @@ int main() {
                                    current_operation);
   }
 
-  printf("%d", solved_value);
+  printf("%d \n", solved_value);
   return 0;
 }
